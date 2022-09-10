@@ -1,6 +1,6 @@
 export enum DeliveryMedium {
   Email = "email",
-  Telephone = "telephone",
+  SMS = "sms",
 }
 
 export interface Friend {
