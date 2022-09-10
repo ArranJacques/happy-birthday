@@ -1,0 +1,5 @@
+{
+  "name": "happy-birthday",
+  "region": "eu-west-2",
+  "main": "stack/index.ts"
+}

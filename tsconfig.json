@@ -1,0 +1,12 @@
+{
+  "extends": "@tsconfig/node16",
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "src",
+    "noEmit": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true
+  },
+  "include": ["stack/**/*.ts", "src/**/*.ts"]
+}
