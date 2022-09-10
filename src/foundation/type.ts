@@ -9,7 +9,7 @@ export interface Friend {
   dateOfBirth: string;
   email: string;
   telephone: string;
-  deliverMedium: DeliveryMedium;
+  deliveryMedium: DeliveryMedium;
 }
 
 export enum DataDriver {

@@ -13,9 +13,7 @@ export async function getFriendsFileSystemDriver(): Promise<Friend[]> {
     throw new FileNotFoundError(FRIENDS_FILE);
   }
 
-  const csv = file.toString();
-
-  const [, ...rawRows] = csv.split(/\r?\n/);
+  const [, ...rawRows] = file.toString("utf-8").trim().split(/\r?\n/);
 
   // ℹ️ This is some super simple logic to parse and validate the csv. For a more
   // complex application we'd want something a bit more heavy duty, but for our
