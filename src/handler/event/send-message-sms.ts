@@ -4,4 +4,5 @@ import { Friend } from "foundation/type";
 export const handler = handleEvent<Friend>(async (payload) => {
   console.log("sending birthday message via sms...");
   console.log(payload);
+  // 🎯 TODO: implement logic.
 });
