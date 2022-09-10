@@ -43,6 +43,13 @@ export function AppStack({ stack }: StackContext) {
   const sendMessageEmailLambda = new Function(stack, "SendMessageEmailLambda", {
     functionName: `send-message-email--${stack.stage}`,
     handler: "src/handler/event/send-message-email.handler",
+    initialPolicy: [
+      new iam.PolicyStatement({
+        effect: iam.Effect.ALLOW,
+        actions: ["ses:SendEmail", "ses:SendRawEmail"],
+        resources: ["*"],
+      }),
+    ],
   });
 
   // 👇 Create a new Queue to push events to the `sendMessageEmailLambda` handler.

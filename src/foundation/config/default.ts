@@ -4,3 +4,8 @@ import { DataDriver } from "foundation/type";
 export const DATA_DRIVER = DataDriver.FileSystem;
 
 export const FRIENDS_FILE = "friends.csv";
+
+// ℹ️ The sending domain needs to be registered and verified in AWS SES,
+// otherwise it won't work.
+export const DEFAULT_EMAIL_SENDER_ADDRESS = "happy-birthday@example.com";
+export const DEFAULT_EMAIL_SENDER_NAME = "Bob Jones";
