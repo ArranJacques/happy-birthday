@@ -13,7 +13,7 @@ import * as s3 from "aws-cdk-lib/aws-s3";
 
 export function AppStack({ stack }: StackContext) {
   const bucketName = `happy-birthday--files--${stack.stage}`;
-  const deleteBucketOnStackDelete = stack.stage !== "local";
+  const deleteBucketOnStackDelete = stack.stage === "local";
 
   const eventBus = new EventBus(stack, "EventBus", {
     cdk: {
@@ -110,7 +110,7 @@ export function AppStack({ stack }: StackContext) {
 
   // 👇 Create a handler to identify friend's birthdays and publish events to send
   // happy birthday messages.
-  const happyBirthdayLambda = new Function(stack, "HappyBirthday", {
+  const happyBirthdayLambda = new Function(stack, "HappyBirthdayLambda", {
     functionName: `happy-birthday--${stack.stage}`,
     handler: "src/handler/cron/happy-birthday.handler",
     initialPolicy: [
@@ -132,7 +132,7 @@ export function AppStack({ stack }: StackContext) {
   });
 
   // 👇️ Schedule the `happyBirthdayLambda` to run every day at 9AM.
-  new events.Rule(stack, "AlertOldStacksSchedule", {
+  new events.Rule(stack, "HappyBirthdayCron", {
     schedule: events.Schedule.cron({
       minute: "0",
       hour: "9",
