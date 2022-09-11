@@ -17,7 +17,7 @@ export async function getFriendsFileSystemDriver(): Promise<Friend[]> {
 
   // ℹ️ This is some super simple logic to parse and validate the csv. For a more
   // complex application we'd want something a bit more heavy duty, but for our
-  // purposes this will do.
+  // purposes, this will do.
   return rawRows.map((row) => {
     const [firstName, lastName, dateOfBirth, email, telephone, deliveryMedium] =
       row.split(",").map((col) => col.trim());
