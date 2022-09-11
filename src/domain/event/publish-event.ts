@@ -4,7 +4,7 @@ import {
 } from "@aws-sdk/client-eventbridge";
 import { EVENT_BUS_ARN } from "foundation/config/runtime";
 
-// ℹ️ This is a super basic event publisher that lets us put events onto the
+// 🧠 This is a super basic event publisher that lets us put events onto the
 // event bus. In anything more serious we'd want to create an event registry
 // with event schemas, validation and contract testing, but for our purposes,
 // this will do.

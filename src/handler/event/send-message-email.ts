@@ -14,7 +14,7 @@ export const handler = handleEvent<Friend>(async (payload) => {
       },
     ],
     subject: "Happy birthday!",
-    // ℹ️ If the templating got any more complicated than this I'd abstract it out
+    // 🧠 If the templating got any more complicated than this I'd abstract it out
     // of this handler.
     content: { html: `Happy birthday, dear ${payload.firstName}!` },
   });

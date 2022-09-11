@@ -50,3 +50,8 @@ This can be deployed to AWS in a development environment, where it should work, 
 
 - I didn't have a huge amount of time to build this out to the extent I would have liked, so to give you an idea of what I would have liked to do and my thought process, I've left to-dos and comments throughout.
 - An event-driven architecture is a little over engineered for a personal app like this, but it's meant to demonstrate skills and understanding of different approaches, which is why I took the approach I did.
+
+## Road Map
+
+- Action all 🎯 TODOs.
+- Hook this up to [https://www.moonpig.com](https://www.moonpig.com) and have it automatically purchase and deliver cards 😂.
