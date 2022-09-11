@@ -131,6 +131,15 @@ export function AppStack({ stack }: StackContext) {
     },
   });
 
+  // 👇️ Schedule the `happyBirthdayLambda` to run every day at 9AM.
+  new events.Rule(stack, "AlertOldStacksSchedule", {
+    schedule: events.Schedule.cron({
+      minute: "0",
+      hour: "9",
+    }),
+    targets: [new targets.LambdaFunction(happyBirthdayLambda)],
+  });
+
   // 👇 Stack outputs.
   stack.addOutputs({
     EventBusArn: eventBus.eventBusArn,
