@@ -54,6 +54,7 @@ describe("handler > cron > happy-birthday", () => {
 
         await expect(handler()).resolves.not.toThrow();
 
+        // Check we loaded the `friends.csv` from from the file-system.
         expect(getFriendsFileIntercept.getRequestCountMade()).toEqual(1);
 
         // Since this is an integration test I wanted to intercept the api call made to

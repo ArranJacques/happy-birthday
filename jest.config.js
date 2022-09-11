@@ -5,4 +5,5 @@ module.exports = {
   transform: {
     "<regex_match_files>": ["ts-jest", { diagnostics: false }],
   },
+  testPathIgnorePatterns: ["<rootDir>/__tests__/support"],
 };
