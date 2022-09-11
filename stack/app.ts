@@ -139,9 +139,4 @@ export function AppStack({ stack }: StackContext) {
     }),
     targets: [new targets.LambdaFunction(happyBirthdayLambda)],
   });
-
-  // 👇 Stack outputs.
-  stack.addOutputs({
-    EventBusArn: eventBus.eventBusArn,
-  });
 }
