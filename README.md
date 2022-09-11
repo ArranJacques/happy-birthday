@@ -44,6 +44,9 @@ This can be deployed to AWS in a development environment, where it should work, 
 
 ## Test
 
+- Run tests by running `npm run test`.
+- I have added one example of an integration test and one example of a unit test.
+- I haven't added full code coverage at all, and if this was a real application, I'd add tests to cover all the different scenarios.
 
 ## Notes
 
