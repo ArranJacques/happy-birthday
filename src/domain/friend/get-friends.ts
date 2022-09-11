@@ -5,7 +5,7 @@ import { UnsupportedDriverError } from "support/error/unsupported-driver-error";
 
 export async function getFriends(driver: DataDriver): Promise<Friend[]> {
   // 🧠 This is a pretty crude implementation to allow us load friends from
-  // different data sources with minimum overhead. While not ideal it's easy
+  // different data sources with minimum overhead. While not ideal, it's easy
   // enough to extend and add new drivers, and given the purpose of this app, it
   // seems like an appropriate solution.
   switch (driver) {

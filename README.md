@@ -42,7 +42,6 @@ This can be deployed to AWS in a development environment, where it should work, 
 - The trigger lambda is configured to run at 9am every day, but for testing purposes you can invoke the Lambda manually using the SST dev console.
 - If the `friends.csv` file you uploaded contains any friends who's birthday is today, they should 🤞 get emails.
 
-
 ## Test
 
 
